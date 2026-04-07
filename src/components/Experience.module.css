@@ -1,0 +1,157 @@
+.section {
+  background: var(--bg-secondary);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.item {
+  display: flex;
+  gap: 24px;
+}
+
+.connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--text-muted);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.activeDot {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(99,102,241,0.2);
+}
+
+.line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--accent), var(--border-subtle));
+  margin: 8px 0;
+  min-height: 40px;
+}
+
+.card {
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.jobTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.sep {
+  color: var(--text-muted);
+}
+
+.right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.period {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent-light);
+  font-family: 'Fira Code', monospace;
+  margin-bottom: 6px;
+}
+
+.typeBadge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(100, 116, 139, 0.15);
+  border: 1px solid rgba(100, 116, 139, 0.3);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.typeBadge.current {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: var(--border);
+  color: var(--accent-light);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.bulletDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+@media (max-width: 600px) {
+  .cardTop {
+    flex-direction: column;
+  }
+  .right {
+    text-align: left;
+  }
+  .connector {
+    display: none;
+  }
+  .item {
+    gap: 0;
+  }
+}
